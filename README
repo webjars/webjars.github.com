@@ -1,1 +1,3 @@
-This is a repo of web libraries wrapped into JAR files.
+This is a Maven repo of web libraries wrapped into JAR files.
+
+Request new JAR files by creating a new Issue in this project.
