@@ -2,32 +2,63 @@
 <html>
 <head>
   <title>WebJars</title>
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <style>
+  body {
+    margin-top: 60px;
+  }
+  </style>
 </head>
 <body>
-  <h1>WebJars</h1>
-  <hr width="80%"/>
-  Current WebJars:
-  <table>
-    <tr>
-      <th>groupId</th>
-      <th>artifactId</th>
-      <th>latest version</th>
-    </tr>
-    <tr>
-      <td>com.jquery</td>
-      <td>jquery</td>
-      <td>1.7.1</td>
-    </tr>
-    <tr>
-      <td>com.github.tkyk</td>
-      <td>jquery.history.js</td>
-      <td>0.1</td>
-    </tr>
-    <tr>
-      <td>com.github.twitter</td>
-      <td>bootstrap</td>
-      <td>2.0.2</td>
-    </tr>
-  </table>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">WebJars</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      Current WebJars:
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>groupId</th>
+            <th>artifactId</th>
+            <th>latest version</th>
+          </tr>
+        <thead>
+        <tbody>
+          <tr>
+            <td>com.jquery</td>
+            <td>jquery</td>
+            <td>1.7.1</td>
+          </tr>
+          <tr>
+            <td>com.github.tkyk</td>
+            <td>jquery.history.js</td>
+            <td>0.1</td>
+          </tr>
+          <tr>
+            <td>com.github.twitter</td>
+            <td>bootstrap</td>
+            <td>2.0.2</td>
+          </tr>
+        <tbody>
+      </table>
+      <br/>
+      Maven Repo Declaration (pom.xml):
+      <pre>
+    &lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;webjars&lt;/id&gt;
+            &lt;url&gt;http://webjars.github.com/m2&lt;/url&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;</pre>
+      <br/>
+      Play 2 Repo Declaration (project/Build.scala):
+      <pre>
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+      resolvers += "webjars" at "http://webjars.github.com/m2"
+    )</pre>
 </body>
 </html>
