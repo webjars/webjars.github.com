@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.theironcook</groupId>
+    <artifactId>backbone.modelbinder</artifactId>
+    <name>Backbone.ModelBinder</name>
+    <version>0.1.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.jquery</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.documentcloud</groupId>
+            <artifactId>backbone</artifactId>
+            <version>0.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.underscorejs</groupId>
+            <artifactId>underscore</artifactId>
+            <version>1.3.3</version>
+        </dependency>
+    </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>webjars.github.com</id>
+        <url>file:///${basedir}/../webjars.github.com/m2/</url>
+      </repository>
+    </distributionManagement>
+</project>

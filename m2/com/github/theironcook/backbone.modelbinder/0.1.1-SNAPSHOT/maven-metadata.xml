@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.github.theironcook</groupId>
+  <artifactId>backbone.modelbinder</artifactId>
+  <version>0.1.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20120508.222141</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20120508222141</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.1.1-20120508.222141-1</value>
+        <updated>20120508222141</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.1.1-20120508.222141-1</value>
+        <updated>20120508222141</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
