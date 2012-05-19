@@ -152,6 +152,16 @@
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
       resolvers += "webjars" at "http://webjars.github.com/m2"
     )</pre>
+      <br/>
+      Gradle Repo Declaration (build.gradle):
+      <pre>
+apply plugin: 'java'
+
+repositories {
+  maven {
+    url 'http://webjars.github.com/m2'
+  }
+}</pre>
      <br/>
      <br/>
      Example Apps:
