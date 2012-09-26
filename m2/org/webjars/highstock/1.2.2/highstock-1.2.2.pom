@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.webjars</groupId>
+    <artifactId>highstock</artifactId>
+    <name>Highstock</name>
+    <version>1.2.2</version>
+    <packaging>jar</packaging>
+    <distributionManagement>
+        <repository>
+            <id>webjars.github.com</id>
+            <url>file:///${basedir}/../webjars.github.com/m2/</url>
+        </repository>
+    </distributionManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <downloadUrl>http://code.highcharts.com/stock/${project.version}</downloadUrl>
+        <destinationDir>${project.build.directory}/classes/META-INF/resources/webjars/${project.artifactId}/${project.version}</destinationDir>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>wagon-maven-plugin</artifactId>
+                <version>1.0-beta-4</version>
+                <executions>
+                    <execution>
+                        <id>download-js</id>
+                        <phase>process-resources</phase>
+                        <goals><goal>download-single</goal></goals>
+                        <configuration>
+                            <url>${downloadUrl}</url>
+                            <fromFile>highstock.js</fromFile>
+                            <toDir>${destinationDir}</toDir>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
